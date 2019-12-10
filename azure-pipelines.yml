@@ -30,8 +30,7 @@ jobs:
         pip install --upgrade pip setuptools wheel twine keyring artifacts-keyring
         $env:VCINSTALLDIR="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
         $env:CL="-FI`"$env:VCINSTALLDIR\INCLUDE\stdint.h`""
-        #python setup.py bdist_wheel
-        pip install pycrypto -vvv
+        pip wheel .
     displayName: 'build wheel'
   # - task: TwineAuthenticate@1
   #   inputs:
