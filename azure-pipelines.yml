@@ -31,7 +31,7 @@ jobs:
         $env:VCINSTALLDIR="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
         $env:CL="-FI`"$env:VCINSTALLDIR\INCLUDE\stdint.h`""
         #python setup.py bdist_wheel
-        pip install pycrypto
+        pip install pycrypto -vvv
     displayName: 'build wheel'
   # - task: TwineAuthenticate@1
   #   inputs:
