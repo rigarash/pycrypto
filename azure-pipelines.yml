@@ -26,7 +26,7 @@ jobs:
   - script: |
       pip install --upgrade pip setuptools wheel twine keyring artifacts-keyring
       set VCINSTALLDIR="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
-      set CL="-FI`"$VCINSTALLDIR\INCLUDE\stdint.h`""
+      set CL=-FI"%VCINSTALLDIR%Tools\MSVC\14.23.28105\INCLUDE\stdint.h"
       pip wheel .
     displayName: 'build wheel'
   # - task: TwineAuthenticate@1
